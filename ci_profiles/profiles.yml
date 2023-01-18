@@ -12,9 +12,9 @@ stocks:
       user:      dbt
       password:  dbtPassword123
       role:      transform
-      database:  FT_DB
-      warehouse: FT_WH
-      schema:    FT_STAGING
+      database:  AIRBNB
+      warehouse: COMPUTE_WH
+      schema:    DEV
 
       threads: 8
       client_session_keep_alive: False
@@ -26,9 +26,9 @@ stocks:
       user:      dbt
       password:  dbtPassword123
       role:      transform
-      database:  FT_DB
-      warehouse: FT_WH
-      schema:    FT_STAGING
+      database:  AIRBNB
+      warehouse: COMPUTE_WH
+      schema:    DEV
 
       threads: 8
       client_session_keep_alive: False
