@@ -32,5 +32,6 @@ jobs:
   
       - name: Deploy
         run: |
+         dbt deps --profiles-dir ./ci_profiles
          dbt run --profiles-dir ./ci_profiles
          dbt test --profiles-dir ./ci_profiles
