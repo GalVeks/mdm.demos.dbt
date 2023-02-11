@@ -35,3 +35,7 @@ jobs:
          dbt deps --profiles-dir ./ci_profiles
          dbt run --profiles-dir ./ci_profiles
          dbt test --profiles-dir ./ci_profiles
+         
+      - name: Docs
+        run: |
+         dbt docs generate --profiles-dir ./ci_profiles
