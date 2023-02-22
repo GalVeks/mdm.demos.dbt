@@ -40,11 +40,11 @@ jobs:
       - name: Docs
         run: |
          dbt docs generate --profiles-dir ./ci_profiles
-         aws s3api list-buckets
+         aws s3 cp /home/runner/work/mdm.demos.dbt/mdm.demos.dbt/target/ s3://mdm-dbt --recursive
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          # AWS_DEFAULT_REGION: ${{ env.AWS_DEFAULT_REGION }}
+          # AWS_DEFAULT_REGION: ${{ env.AWS_DEFAULT_REGION }} # aws s3api list-buckets
 
 
 
